@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .mainpoint{
+            color: aqua;
+        }
+        .highlight{
+            color:darkmagenta;
+            font-size: 20px;
+        }
+        .mainpoint.highlight{
+            color:blue;
+        }
+        /* .mainpoint p{
+            color: chartreuse;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="mainpoint">
+        <p>This is a p tag within div.mainpoint</p>
+    </div>
+
+    <div class="highlight">
+        <p>
+            This is a p tag within div.highlight
+            <div class="mainpoint">
+                <p>
+                    <span>
+                        This is a span tag within div.highlight->p->div->p->span
+                    </span>
+                </p>
+            </div>
+        </p>
+        <div>
+            <p>This is a p tag within div.highlight->div->p</p>
+        </div>
+    </div>
+
+    <div class="mainpoint highlight">
+        <p>This is a p tag within div.mainpoint highlight</p>
+    </div>
+</body>
+</html>
