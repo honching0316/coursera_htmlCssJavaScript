@@ -4,3 +4,24 @@ body{
     background-color: #61122f;
     font-family: 'Oxygen', sans-serif;
 }
+
+#header-nav{
+    background-color: #f6b319;
+}
+
+#logo-img{
+    background-image: url(../images/restaurant-logo.png);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 10px 15px 10px 0;
+}
+
+
+.pull-left{
+    float: left;
+}
+
+.second-brand{
+    margin-top: 10%;
+}
