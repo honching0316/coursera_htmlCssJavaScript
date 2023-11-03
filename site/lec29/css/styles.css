@@ -61,6 +61,7 @@ body{
 
 @media (max-width: 767px) {
     .unvisible-sm{
-        visibility: hidden;
+        /* visibility: hidden; */
+        display: none;
     }
 }
