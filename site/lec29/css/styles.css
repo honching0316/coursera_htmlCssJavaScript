@@ -2,7 +2,7 @@ body{
     font-size: 16px;
     color: white;
     background-color: #61122f;
-    font-family: 'Lora', serif;
+    font-family: 'Oxygen', serif;
 }
 
 #header-nav{
@@ -28,4 +28,39 @@ body{
 
 .navbar-brand{
     padding-top: 25px;
+}
+
+/* restaurant name*/
+.navbar-brand h1{
+    font-family: 'Lora', serif;
+    color: #557c3e;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #222;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .75;
+}
+
+/* want it to be clickable but not look like regular link */
+.navbar-brand a:hover, .navbar-brand a:focus, .navbar-brand a{
+    text-decoration: none;
+}
+.navbar-brand p{ /*kosher cert*/
+    color: #000;
+    text-transform: uppercase;
+    font-size: .7em; /* decrease to 70% of the default font size NOT the size inherited from body tag*/
+    margin-top: 15px;   /* to separate it from the actual brand*/
+}
+
+/* want it to vertical align with the star image */
+.navbar-brand p span{
+    vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+    .unvisible-sm{
+        visibility: hidden;
+    }
 }
