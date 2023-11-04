@@ -185,3 +185,7 @@ body{
         height: 20px;
     }
 }
+
+.container-xxl .jumbotron{
+    padding: 0;
+}
