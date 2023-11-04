@@ -161,7 +161,7 @@ body{
 
 }
 /* xs and small device */
-@media (min-width:576px) and (max-width:767px){
+@media (max-width:767px){
     .navbar-brand{
         padding-top: 10px;
         /* height: 80px; */
@@ -183,66 +183,5 @@ body{
     }
     .navbar-brand p img{
         height: 20px;
-    }
-}
-/* for xs device */
-@media (min-width:266px) and (max-width:575px){
-    .navbar-brand{
-        padding-top: 10px;
-        height: 80px;
-    }
-    /*  */
-    .navbar-brand h1{
-        padding-top: 10px;
-        /* 1vw = 1% of viewport/screensize width */
-        font-size: 5vw;
-    }
-    /* kosher certificate */
-    .navbar-brand p{
-        /* 0.6 = 60% of the default font size */
-        font-size: .6em;
-        margin: 12px;
-    }
-    .navbar-brand p img{
-        height: 15px;
-    }
-    .second-brand{
-        margin-top: 5%;
-    }
-    #header-nav button.navbar-toggler .navbar-toggler-icon{
-        /* #header-nav .navbar-toggler-icon */
-        width: 0.9em;
-        height: 0.9em;
-        background-size: 120%;
-    }
-}
-@media (max-width:265px){
-    .navbar-brand{
-        padding-top: 10px;
-        /* height: 80px; */
-    }
-    /*  */
-    .navbar-brand h1{
-        padding-top: 10px;
-        /* 1vw = 1% of viewport/screensize width */
-        font-size: 3vw;
-    }
-    /* kosher certificate */
-    .navbar-brand p{
-        /* 0.6 = 60% of the default font size */
-        font-size: .3em;
-        margin: 12px;
-    }
-    .navbar-brand p img{
-        height: 15px;
-    }
-    .second-brand{
-        margin-top: 0;
-    }
-    #header-nav button.navbar-toggler .navbar-toggler-icon{
-        /* #header-nav .navbar-toggler-icon */
-        width: 0.5em;
-        height: 0.5em;
-        background-size: 150%;
     }
 }
