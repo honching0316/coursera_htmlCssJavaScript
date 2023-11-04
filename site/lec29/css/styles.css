@@ -9,13 +9,13 @@ body{
     background-color: #f6b319;
 }
 
-#logo-img{
+/* #logo-img{
     background-image: url(../images/restaurant-logo.png);
     background-repeat: no-repeat;
     width: 150px;
     height: 150px;
     margin: 10px 15px 10px 0;
-}
+} */
 
 
 .pull-left{
@@ -24,10 +24,6 @@ body{
 
 .second-brand{
     margin-top: 10%;
-}
-
-.navbar-brand{
-    padding-top: 25px;
 }
 
 /* restaurant name*/
@@ -60,7 +56,7 @@ body{
 }
 
 @media (max-width: 991px) {
-    .unvisible-sm{
+    .unvisible-lg{
         /* visibility: hidden; */
         display: none;
     }
@@ -108,4 +104,79 @@ body{
 #header-nav button.navbar-toggler{
     /* #header-nav .navbar-toggler-icon */
     border: 1px solid #61122f;
+}
+
+
+/* Extra large device */
+@media (min-width:1200px){
+    #logo-img{
+        background-image: url(../images/restaurant-logo.png);
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 150px;
+        margin: 10px 15px 10px 0;
+    }
+    .navbar-brand{
+        padding-top: 25px;
+    }
+}
+/* Large device */
+@media (min-width:992px) and (max-width:1199px){
+    #logo-img{
+        background-image: url(../images/restaurant-logo_medium.png);
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+        margin: 5px 5px 5px 0;
+    }
+    .navbar-brand{
+        padding-top: 25px;
+    }
+    /* .navbar-brand h1{
+        padding-top: 10px; */
+        /* 1vw = 1% of viewport/screensize width */
+        /* font-size: 5vw; */
+        /* float: left;
+    } */
+    /* .navbar-brand p{ */
+        /* 0.6 = 60% of the default font size */
+        /* font-size: .6em;
+        margin: 12px;
+        float: left;
+    } */
+}
+/* Medium device */
+@media (min-width:768px) and (max-width:991px){
+    .navbar-brand{
+        padding-top: 25px;
+    }
+    .second-brand{
+        margin-top: 0;
+    }
+
+}
+/* xs and small device */
+@media (max-width:767px){
+    .navbar-brand{
+        padding-top: 10px;
+        height: 80px;
+    }
+    /*  */
+    .navbar-brand h1{
+        padding-top: 10px;
+        /* 1vw = 1% of viewport/screensize width */
+        font-size: 5vw;
+    }
+    .second-brand{
+        margin-top: 0;
+    }
+    /* kosher certificate */
+    .navbar-brand p{
+        /* 0.6 = 60% of the default font size */
+        font-size: .6em;
+        margin: 12px;
+    }
+    .navbar-brand p img{
+        height: 20px;
+    }
 }
