@@ -187,8 +187,40 @@ body{
 #testimonials p:nth-child(2){
     margin-top: 25px;
 }
-
 /* END FOOTER */
+/* END HOME PAGE */
+
+
+/* MENU CATEGORIES PAGE */
+.category-tile{
+    position: relative;
+    border: 2px solid #3F0C1F;
+    overflow: hidden;
+    width: 200px;
+    margin: 0 auto 15px auto;
+    height: 200px;
+}
+
+.category-tile span{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.8;
+}
+.category-tile:hover{
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title + div{
+    margin-bottom: 50px;
+}
+
 
 /* Extra large device */
 @media (min-width:1200px){
@@ -283,6 +315,21 @@ body{
         width: 360px;
         margin: 0 auto 15px auto;
     }
+
+    /* Footer */
+    .panel-footer section{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .panel-footer section:nth-child(3){
+        /* margin already exists on the whole row */
+        margin-bottom: 0;
+    }
+    .panel-footer section hr{
+        width: 50%;
+        margin: 16px auto 16px auto;
+    }
+    /* End Footer */
 }
 
 /* Super small devices only eg.iphone4*/
