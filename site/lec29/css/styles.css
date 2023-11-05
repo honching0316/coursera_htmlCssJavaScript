@@ -106,6 +106,14 @@ body{
 }
 
 
+.container .jumbotron{
+    padding: 0;
+    box-shadow: 0 0 50px #3F0C1F;
+    border: 2px solid #3F0C1F;
+}
+
+
+
 /* Extra large device */
 @media (min-width:1200px){
     #logo-img{
@@ -120,6 +128,13 @@ body{
     }
     .second-brand{
         margin-top: 5%;
+    }
+    .container .jumbotron{
+        background: url('../images/jumbotron_1200.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 675px;
+        /* width: 1200px; */
     }
 }
 /* Large device */
@@ -137,18 +152,11 @@ body{
     .second-brand{
         margin-top: 5%;
     }
-    /* .navbar-brand h1{
-        padding-top: 10px; */
-        /* 1vw = 1% of viewport/screensize width */
-        /* font-size: 5vw; */
-        /* float: left;
-    } */
-    /* .navbar-brand p{ */
-        /* 0.6 = 60% of the default font size */
-        /* font-size: .6em;
-        margin: 12px;
-        float: left;
-    } */
+    .container .jumbotron{
+        background: url('../images/jumbotron_992.jpg');
+        background-repeat: no-repeat;
+        height: 558px;
+    }
 }
 /* Medium device */
 @media (min-width:768px) and (max-width:991px){
@@ -157,6 +165,12 @@ body{
     }
     .second-brand{
         margin-top: 5%;
+    }
+
+    .container .jumbotron{
+        background: url('../images/jumbotron_768.jpg');
+        background-repeat: no-repeat;
+        height: 432px;
     }
 
 }
@@ -184,8 +198,10 @@ body{
     .navbar-brand p img{
         height: 20px;
     }
+    /* Home Page */
+    .container .jumbotron {
+        margin-top: 30px;
+        padding: 0;
+    }
 }
 
-.container-xxl .jumbotron{
-    padding: 0;
-}
