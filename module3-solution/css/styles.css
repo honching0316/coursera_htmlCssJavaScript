@@ -1,3 +1,15 @@
 .navbar{
     background-color: lightgray;
 }
+
+.nav-item{
+    text-align: center;
+}
+
+.nav-item:hover{
+    background-color: white;
+}
+
+#main-content{
+    
+}
