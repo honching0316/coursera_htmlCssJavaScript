@@ -220,6 +220,10 @@ body{
 #menu-categories-title + div{
     margin-bottom: 50px;
 }
+.active{
+    background: #E7E7E7;
+}
+
 
 /* SINGLE CATEGORY PAGE */
 .menu-item-tile{
@@ -390,6 +394,25 @@ h3.menu-item-title {
     .menu-item-description{
         text-align: center;
     }
+    /* END CATEGORY PAGE*/
+
+    /* the phone button*/
+    #call-btn > a{
+        display: block;
+        border: 2px solid #fff;
+        margin: 25px 20px;
+        padding: 10px;
+        font-size: 1.5em;
+        background-color: #f6b319;
+        color: #951c49;
+    }
+    #xs-deliver {
+        margin-top: 5px;
+        font-size: .7em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+
 }
 
 /* Super small devices only eg.iphone4*/
