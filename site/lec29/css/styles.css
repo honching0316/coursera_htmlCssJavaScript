@@ -221,6 +221,33 @@ body{
     margin-bottom: 50px;
 }
 
+/* SINGLE CATEGORY PAGE */
+.menu-item-tile{
+    margin-bottom: 25px;
+}
+.menu-item-tile hr{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 0 auto 0 auto; */
+}
+/* aiming the ".menu-item-price" with the item tile*/
+.menu-item-tile .menu-item-price{
+    font-size: 1.1em;
+    text-align: right;
+}
+.menu-item-tile .menu-item-price span{
+    font-size: .6em;
+}
+.menu-item-photo{
+    position: relative;
+    border: 2px solid #3f0c1f;
+    overflow: hidden;
+    padding: 0;
+    max-width: 250px;
+    margin-right: -15px;
+}
+
 
 /* Extra large device */
 @media (min-width:1200px){
