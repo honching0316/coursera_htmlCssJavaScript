@@ -13,3 +13,13 @@
 #main-content{
     
 }
+
+.item-tile{
+    position: relative;
+    background-color: lightgray;
+}
+
+h3.sub_title{
+    margin-top: 5px;
+    text-align: center;
+}
