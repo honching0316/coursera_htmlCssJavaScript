@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .navbar{
     background-color: lightgray;
 }
@@ -10,13 +14,15 @@
     background-color: white;
 }
 
-#main-content{
-    
+.item-tile{
+    /* position: relative; */
+    background-color: lightgray;
+    width: 300px;
+    margin: 0 auto 20px auto;
 }
 
-.item-tile{
-    position: relative;
-    background-color: lightgray;
+#main-title{
+    margin: 20px 0 30px 0;
 }
 
 h3.sub_title{
