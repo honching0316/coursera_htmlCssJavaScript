@@ -17,7 +17,7 @@
 .item-tile{
     /* position: relative; */
     background-color: lightgray;
-    width: 300px;
+    padding: 10px;
     margin: 0 auto 20px auto;
 }
 
