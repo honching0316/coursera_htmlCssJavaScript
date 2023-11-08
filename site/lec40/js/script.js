@@ -49,7 +49,28 @@ function doOperationOn(x, operation){
 15
 200
 */
+
+
 var result = doOperationOn(5, multiplyBy3);
 console.log(result);
 result = doOperationOn(100, doubleAll);
 console.log(result)
+
+var literalCircle = {
+    radius: 10,
+
+    getArea: function(){
+        console.log(this);
+        var self = this;
+
+        var increaseRadius = function(){
+            self.radius = 20;
+        };
+        increaseRadius();
+        console.log(this.radius);
+
+        return Math.PI * Math.pow(this.radius, 2);
+    }
+}
+
+console.log(literalCircle.getArea());
