@@ -5,7 +5,8 @@
 
 /* 
 this event = once the webpage is loaded
-this function will be execute once the event happens
+this function(function(event){...}) will be execute once the event happens
+thus we able to put the script tag anywhere we want in the index.html(no longer must stick on buttom)
 */
 document.addEventListener("DOMContentLoaded", 
     function(event){
@@ -37,6 +38,18 @@ document.addEventListener("DOMContentLoaded",
         
         document.querySelector("button")
         .addEventListener("click", sayHello);
+
+        document.querySelector("body")
+        .addEventListener("mousemove", 
+            function(event){
+                // console.log(event);
+                if(event.shiftKey===true){
+                    console.log("x: "+event.clientX);
+                    console.log("y: "+event.clientY);
+                }
+            }
+        )
+
     } // End function(event){..}
 )
 
