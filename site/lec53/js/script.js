@@ -1,8 +1,24 @@
+// console.log(document)
+// console.log(document.getElementById("title"))
+// console.log(typeof(document))
+// console.log(document instanceof Document)
 
-console.log(document)
+function sayHello(){
+    // document - same as window.document since scope chain to get the global context(window object)
+    var name = document.getElementById("name").value;
+    var message = "<h2> Hello " + name + "!</h2>";
 
-console.log(document.getElementById("title"))
+    document
+    .getElementById("content")
+    .innerHTML = message;
 
-console.log(typeof(document))
+    //strict operator - 1st check same type, 2nd check same value
+    if(name==="student"){
+        var title = 
+            document.querySelector("#title").textContent;
 
-console.log(document instanceof Document)
+        title+= "& Lovin' it"
+        document.querySelector("h1").textContent = title;
+    }
+
+}
