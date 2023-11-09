@@ -3,22 +3,40 @@
 // console.log(typeof(document))
 // console.log(document instanceof Document)
 
-function sayHello(){
-    // document - same as window.document since scope chain to get the global context(window object)
-    var name = document.getElementById("name").value;
-    var message = "<h2> Hello " + name + "!</h2>";
+/* 
+this event = once the webpage is loaded
+this function will be execute once the event happens
+*/
+document.addEventListener("DOMContentLoaded", 
+    function(event){
+        function sayHello(event){
 
-    document
-    .getElementById("content")
-    .innerHTML = message;
+            console.log(event);
+            console.log(this)
 
-    //strict operator - 1st check same type, 2nd check same value
-    if(name==="student"){
-        var title = 
-            document.querySelector("#title").textContent;
+            this.textContent = "Said it!"
+        
+            // document - same as window.document since scope chain to get the global context(window object)
+            var name = document.getElementById("name").value;
+            var message = "<h2> Hello " + name + "!</h2>";
+        
+            document
+            .getElementById("content")
+            .innerHTML = message;
+        
+            //strict operator - 1st check same type, 2nd check same value
+            if(name==="student"){
+                var title = 
+                    document.querySelector("#title").textContent;
+        
+                title+= "& Lovin' it"
+                document.querySelector("h1").textContent = title;
+            }
+        
+        }
+        
+        document.querySelector("button")
+        .addEventListener("click", sayHello);
+    } // End function(event){..}
+)
 
-        title+= "& Lovin' it"
-        document.querySelector("h1").textContent = title;
-    }
-
-}
