@@ -7,17 +7,29 @@ document.addEventListener("DOMContentLoaded", function(event){
     document.querySelector("button")
     .addEventListener("click", function(event){
         $ajaxUtils
-        .sendGetRequest("data/name.txt", 
-            function (xhttp){
+        .sendGetRequest("data/name.json", 
+            function (res){
                 /* 
                 this function will only be executed when server response to our request/xhttp
                 meaning when it pass conditions of handleResponse function
-                Thus the responseText will be whatever server returns back to us
+                we will convert whatever server returns back to us to JS object, and handle it here (display to html)
+                res - it's an JS object
                 */
-                console.log("xhttp: ", xhttp)
-                var name = xhttp.responseText;
+               // printing our the actual JS object is necessary to debug
+                console.log("res: ", res, ", typeof: ", typeof(res));
+                var message = res.firstName + " " + res.lastName;
+                if(res.likesChineseFood){
+                    message+=" likes Chinese food";
+                }
+                else{
+                    message+=" doesn't like Chinese food";
+                }
+                message+=" and uses ";
+                message+=res.numberOfDisplays + 1;
+                message+=" displays for coding.";
+
                 document.querySelector("#content")
-                .innerHTML = "<h2> Hello "+name+"!</h2>";
+                .innerHTML = "<h2>"+message+"</h2>";
             });
     });
 

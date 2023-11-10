@@ -6,7 +6,7 @@
 
     // Makes an ajax Get request to "requestURL"
     ajaxUtils.sendGetRequest =
-        function(requestUrl, responseHandler){
+        function(requestUrl, responseHandler, isJsonResponse){
             // new XMLHttpRequest() creates an object to interact with the server
             var xhttp = new XMLHttpRequest();
             // assign func to this property, the func will be executed once we get response from server
@@ -19,15 +19,28 @@
                     we only want to pass in the func value not execute the func
                     so having the outer callback func
                     */
-                    handleResponse(xhttp, responseHandler);
+                    handleResponse(xhttp, responseHandler, isJsonResponse);
                 };
+            // async = true
             xhttp.open("GET", requestUrl, true);
             xhttp.send(null); // for POST only, if Get request just pass in "null"
         };
     
-    function handleResponse(xhttp, responseHandler){
+    function handleResponse(xhttp, responseHandler, isJsonResponse){
         if((xhttp.readyState==4) && (xhttp.status==200)){
-            responseHandler(xhttp);
+            // Default isJsonResponse = true
+            if(isJsonResponse==undefined){
+                isJsonResponse=true;
+            }
+            // instead of passing in the xhttp/request object, we passing in an JS object(converted from JSON string)
+            if(isJsonResponse){
+                // if it's a JSON string, convert it to JS object pass into our responseHandler
+                responseHandler(JSON.parse(xhttp.responseText));
+            }
+            else{
+                // already a JS object
+                responseHandler(xhttp.responseText)
+            }
         }
     }
 
