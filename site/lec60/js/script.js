@@ -34,3 +34,44 @@ $(
 
     }
 );
+
+
+/*IIFE - once reach this file, this func will be executed immediately*/
+(function (global){
+
+    var dc={};
+
+    var homeHTML = "snippets/home-snippet.html"
+
+    // Convenience function for inserting innerHTML for the 'selected elem'
+    var insertHtml = function (selector, html){
+        var targetElem = document.querySelector(selector);
+        targetElem.innerHTML = html;
+    }
+
+    // Show loading icon inside element identified by 'selector'.
+    var showLoading = function(selector){
+        var html = "<div class='text-center'>"
+        html+= "<img src='images/ajax-loader.gif'></div>";
+        insertHtml(selector, html);
+    };
+
+    // On page load (before images or css)
+    document.addEventListener("DOMContentLoaded", 
+        function(event){
+            // On first load, show home view
+            showLoading("#main-content");
+            $ajaxUtils.sendGetRequest(
+                homeHTML,
+                function(responseText){
+                    document.querySelector("#main-content")
+                    .innerHTML = responseText;
+                },
+                false
+            );
+        }
+    );
+
+    global.$dc = dc;
+
+})(window);
